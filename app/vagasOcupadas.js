@@ -5,7 +5,7 @@ let vagasLivres2 = totalVagas2 - vagasOcupadas2;
 
 // Função para atualizar os valores na tela
 function atualizarVagas() {
-    var totalVagasElement = document.getElementById('total-vagas'); // Substitua 'total-vagas' pelo ID correto
+    var totalVagasElement = document.getElementById('total-vagas'); 
     var vagasOcupadasElement = document.getElementById('vagas-ocupadas');
     var vagasLivresElement = document.getElementById('vagas-livres')
 
@@ -18,7 +18,7 @@ function atualizarVagas() {
    const dadosVagaString = localStorage.getItem('dadosVaga');
    const dadosVaga = JSON.parse(dadosVagaString);
 
-   // Exibe os dados na página (ajuste de acordo com sua estrutura HTML)
+   // Exibe os dados na página (ajuste de acordo com a estrutura HTML)
    document.getElementsByClassName('DigitePlaca').textContent = `Placa: ${dadosVaga.placa}, Hora de Entrada: ${dadosVaga.horaEntrada}`;
 
    
