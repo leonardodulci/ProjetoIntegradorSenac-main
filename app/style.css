@@ -216,8 +216,8 @@ header > p{
   margin: auto;
   display: block;
 
-  height: 400px;
-  width: 400px;
+  height: 600px;
+  width: 500px;
   background-color: rgb(102, 102, 102);
   text-align: center;
   padding: 5px;
@@ -240,8 +240,9 @@ header > p{
 
 .Chegada , .saída{
   height: 20px;
-  width: 40px;
-  
+  width: 80px;
+  padding: 10px;
+  text-align: center;
 }
 
 span > .txtChegada , .Chegada{
@@ -253,10 +254,10 @@ span > .txtChegada , .Chegada{
 span > .txtsaída , .saída{
   position: relative;
   left: 85px;
-  top: -27px;
+  top: -46px;
 }
 button{
-  padding: 5px;
+  padding: 10px;
   border-radius: 1px;
   margin-right: 10px;
   margin-bottom: 20px;

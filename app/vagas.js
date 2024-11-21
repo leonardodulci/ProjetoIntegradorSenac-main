@@ -72,8 +72,11 @@ function buscarVaga(placa) {
   }
 }
 
+console.log(vagasOcupadas)
+
 // Adiciona o event listener ao campo da placa
 const inputPlaca = document.querySelector('input[type="text"]');
 inputPlaca.addEventListener('input', () => {
   buscarVaga(inputPlaca.value);
 });
+
