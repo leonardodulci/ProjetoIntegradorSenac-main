@@ -262,3 +262,73 @@ button{
   margin-right: 10px;
   margin-bottom: 20px;
 }
+
+#CadastrarFuncionario {
+  padding: 20px;
+  margin: auto;
+  display: block;
+  width: 500px;
+  background-color: rgb(102, 102, 102);
+  text-align: center;
+  border-radius: 5px;
+  margin-bottom: 50px;
+  min-height: 700px; 
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#CadastrarFuncionario form {
+  width: 100%;
+  max-width: 400px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#CadastrarFuncionario input, 
+#CadastrarFuncionario select, 
+#CadastrarFuncionario button {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  font-family: 'Roboto';
+  font-size: 18px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+#CadastrarFuncionario button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  padding: 15px;
+}
+
+#CadastrarFuncionario button:hover {
+  background-color: #45a049;
+}
+
+#CadastrarFuncionario input[type="text"], 
+#CadastrarFuncionario input[type="email"], 
+#CadastrarFuncionario select {
+  font-size: 18px;
+  height: 40px;
+}
+
+#CadastrarFuncionario select {
+  font-size: 18px;
+}
+
+#CadastrarFuncionario label {
+  font-size: 16px;
+  margin-bottom: 5px;
+  text-align: left;
+  width: 100%;
+}
