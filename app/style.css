@@ -203,15 +203,15 @@ header > p{
 }
 
 #TelaUsuario{
-  height: 850px;
+  height: 930px;
 }
 .DigitePlaca{
   margin: auto;
   display: block;
 
-  height: 300px;
+  height: 400px;
   width: 400px;
-  background-color: rgb(139, 24, 24);
+  background-color: rgb(102, 102, 102);
   text-align: center;
   padding: 5px;
   border-radius: 5px;
@@ -221,9 +221,36 @@ header > p{
   font-size: 25px;
   font-family: 'Roboto';
   margin-bottom: 10px;
+  font-weight: bold;
 }
 
 .DigitePlaca > input{
+  padding: 10px;
+  text-align: center;
+  font-size: 25px;
+  font-family: 'Roboto';
+}
+
+.Chegada , .saída{
+  height: 20px;
+  width: 40px;
+  
+}
+
+span > .txtChegada , .Chegada{
+  position: relative;
+  left: -80px;
+  top: 15px;
+}
+
+span > .txtsaída , .saída{
+  position: relative;
+  left: 85px;
+  top: -27px;
+}
+button{
   padding: 5px;
-      
+  border-radius: 1px;
+  margin-right: 10px;
+  margin-bottom: 20px;
 }

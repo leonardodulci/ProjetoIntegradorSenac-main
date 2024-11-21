@@ -56,3 +56,24 @@ vagas.forEach(vaga => {
 
 // Array para armazenar as informações das vagas ocupadas (ajuste conforme sua necessidade)
 
+function buscarVaga(placa) {
+  const vagaEncontrada = vagasOcupadas.find(vaga => vaga.placa === placa);
+
+  if (vagaEncontrada) {
+      const inputChegada = document.querySelector('.Chegada');
+      const inputSaida = document.querySelector('.saída');
+
+      inputChegada.value = vagaEncontrada.horaEntrada;
+      inputSaida.value = new Date().toLocaleTimeString(); // Hora atual
+
+      // ... (outras ações, se necessário)
+  } else {
+      alert('Placa não encontrada.');
+  }
+}
+
+// Adiciona o event listener ao campo da placa
+const inputPlaca = document.querySelector('input[type="text"]');
+inputPlaca.addEventListener('input', () => {
+  buscarVaga(inputPlaca.value);
+});
