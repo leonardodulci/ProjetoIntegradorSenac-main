@@ -13,7 +13,7 @@ function marcarVaga(vaga) {
   const placa = prompt('Digite a placa do veículo:') ;
   const horaEntrada = prompt('Digite a hora de entrada:');
 
-  // Armazena os dados (exemplo usando um array, você pode usar localStorage ou um banco de dados)
+  // Armazena os dados (exemplo usando um array, pode usar localStorage ou um banco de dados)
   const dadosVaga = {
     placa,
     horaEntrada

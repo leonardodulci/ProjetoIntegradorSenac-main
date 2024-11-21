@@ -92,12 +92,19 @@ header > p{
   .iconeVagas{
     width: 40px;
   }
-  .total-vagas{
+  .TotalVagas{
     position: absolute;
     top: 35px;
-    left: 75px;
-  }  
+    left: 70px;
+  }
 
+  #vagas-ocupadas{
+    margin-bottom: 10px;
+  }
+
+  #vagas-ocupadas , #vagas-livres{
+    display: block;
+  }
   .ValorMensal{
     position: absolute;
     top: 80px;

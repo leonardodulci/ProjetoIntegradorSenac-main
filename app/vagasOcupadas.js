@@ -1,43 +1,35 @@
-
 let totalVagas2 = 50;
 let vagasOcupadas2 = 0;
 let vagasLivres2 = totalVagas2 - vagasOcupadas2;
 
 // Função para atualizar os valores na tela
 function atualizarVagas() {
-    var totalVagasElement = document.getElementById('total-vagas'); 
-    var vagasOcupadasElement = document.getElementById('vagas-ocupadas');
-    var vagasLivresElement = document.getElementById('vagas-livres')
+  
+   const InfoSobreVagasOcupadas = document.getElementById('vagas-ocupadas');
+   InfoSobreVagasOcupadas.textContent = `Vagas Ocupadas: ${vagasOcupadas2}`;
 
 
-
-   const resultadoContagem = document.querySelector('span.quadroContagem')
-
-   resultadoContagem.textContent = `Total de vagas: ${totalVagasElement}`;
-   
-   const dadosVagaString = localStorage.getItem('dadosVaga');
-   const dadosVaga = JSON.parse(dadosVagaString);
-
-   // Exibe os dados na página (ajuste de acordo com a estrutura HTML)
-   document.getElementsByClassName('DigitePlaca').textContent = `Placa: ${dadosVaga.placa}, Hora de Entrada: ${dadosVaga.horaEntrada}`;
-
-   
- console.log(`total de vagas: ${totalVagasElement} 
-    Vagas ocupadas: ${vagasOcupadasElement} 
-  Vagas livres:${vagasLivresElement}`);
-
-
-var infovagasquantidade = document.querySelector('span.QuantidadeDeVagas');
-
-infovagasquantidade.textContent = `Total de vagas:${totalVagasElement} 
-
- Vagas Ocupadas: ${vagasOcupadasElement}
- Vagas Livres: ${vagasLivresElement}
-`;
-
-console.log(`total de vagas2: ${totalVagasElement.textContent} Vagas ocupadas: ${vagasOcupadasElement.textContent} 
-  Vagas livres:${vagasLivresElement.textContent}`);
-
+   const InfoVagaLivre = document.getElementById('vagas-livres');
+   InfoVagaLivre.textContent= `Vagas Livres: ${vagasLivres2}`;
+  // ... (outras partes do seu código)
+  
+  console.log(vagasLivres2)
 }
-atualizarVagas();
 
+// Função para simular a adição de um carro
+function adicionarCarro() {
+  // Simula a adição de um carro (você pode implementar a lógica real aqui)
+  vagasOcupadas2++;
+  vagasLivres2--;
+
+  // Atualiza os valores na tela
+  atualizarVagas();
+}
+
+
+// Chama a função para atualizar as vagas inicialmente
+atualizarVagas();
+//atualizarVagas2();
+
+// Exemplo de como chamar a função adicionarCarro ao clicar em um botão:
+document.querySelector('.vagas').addEventListener('click', adicionarCarro);
