@@ -56,15 +56,29 @@ vagas.forEach(vaga => {
 
 // Array para armazenar as informações das vagas ocupadas (ajuste conforme sua necessidade)
 
+
 function buscarVaga(placa) {
   const vagaEncontrada = vagasOcupadas.find(vaga => vaga.placa === placa);
 
   if (vagaEncontrada) {
       const inputChegada = document.querySelector('.Chegada');
       const inputSaida = document.querySelector('.saída');
+      const MostrarTempoGasto = document.querySelector('#tempoGASTO');
 
-      inputChegada.value = vagaEncontrada.horaEntrada;
-      inputSaida.value = new Date().toLocaleTimeString(); // Hora atual
+      const valorMinuto = 0.50;
+
+      // Convertendo as strings de data para objetos Moment.js
+      const horaEntrada = moment(inputChegada.value, 'HH:mm');
+      const horaSaida = moment(inputSaida.value, 'HH:mm');
+
+      // Calculando a diferença em minutos
+      const duracaoEmMinutos = horaSaida.diff(horaEntrada, 'minutes');
+
+      // Calculando o valor total
+      const valorTotal = duracaoEmMinutos * valorMinuto;
+
+      // Exibindo o valor total formatado
+      MostrarTempoGasto.textContent = `R$ ${valorTotal.toFixed(2)}`;
 
       // ... (outras ações, se necessário)
   } else {
@@ -73,10 +87,11 @@ function buscarVaga(placa) {
 }
 
 console.log(vagasOcupadas)
+console.log(tempogasto)
 
 // Adiciona o event listener ao campo da placa
 const inputPlaca = document.querySelector('input[type="text"]');
-inputPlaca.addEventListener('input', () => {
+inputPlaca.addEventListener('change', () => {
   buscarVaga(inputPlaca.value);
 });
 

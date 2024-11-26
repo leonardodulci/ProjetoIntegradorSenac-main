@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=garage_home" />
 </head>
 <body>
-    <header>
+    <header id="headerTelaGerenciamento">
         <p><span class="material-symbols-outlined">
         directions_car
         </span>
@@ -22,9 +22,9 @@
     <span class="sidebar">
         <nav>
             <ul>
-                <li><a href="#CadastrarFuncionario" class="MenuTelaUsuario">Cadastrar funcionário</a></li>
-                <li><a href="#CadastrarCliente" class="MenuTelaUsuario">Cadastrar cliente</a></li>
-                <li><a href="#" class="MenuTelaUsuario">Gerenciamento</a></li>
+                <li><a href="#CadastrarFuncionario" >Cadastrar funcionário</a></li>
+                <li><a href="#CadastrarCliente" >Cadastrar cliente</a></li>
+                <li><a href="#headerTelaGerenciamento" >Gerenciamento</a></li>
                 <li><a href="#TelaUsuario" class="MenuTelaUsuario">Ir para tela usuário</a></li>
             </ul>
         </nav>
@@ -130,21 +130,25 @@
                 <div class="vaga">50</div>
             </div>
         </span>
-
+    </main>
+    <main>
         <div id="TelaUsuario">
             <header class="headerTelaUsuario">
                 <h1>Bem vindo ao ParkEasy</h1>
             </header>
-            <main>
-                <span class="DigitePlaca">
+        
+                <span class="DigitePlaca"><br>
+
                     <p>Digite a placa do seu veículo:</p>
-                    <input type="text"> 
+                    <input type="text"> <br><br>
                 <span>
                     <p class="txtChegada">Horário de chegada:</p>
                     <input type="text" class="Chegada">
                 
                     <p class="txtsaída">Horário de saída:</p>
                     <input type="text" class="saída">
+
+                    <p>Tempo gasto: <div id="tempoGASTO"> </div> </p>
                 </span>
 
                 <p>Selecione a forma de pagamento:</p>
@@ -155,8 +159,8 @@
                 <p>CPF na nota? (Opcional)</p>
                 <input type="text" name="CPF" id="CPF">
             </span>
-
-        </main>
+        </div>    
+    </main>
 
         <div id="CadastrarFuncionario" style="margin-top: 50px;">
             <header class="headerCadastrarFuncionario">
@@ -219,5 +223,6 @@
     <script src="vagasOcupadas.js"></script>
     <script src="cadastrarfuncionarios.js"></script>
     <script src="cadastrarcliente.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
 </body>
 </html>

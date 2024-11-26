@@ -23,11 +23,14 @@ header > p{
     font-size: 20px;
 }
 
+
+
 .sidebar nav {
     width: 210px;
     height: 805px;
     background-color: #f0f0f0;
     padding: 20px;
+    
   }
   
   .sidebar ul {
@@ -209,8 +212,9 @@ header > p{
   margin-bottom: 100px;
 }
 
-#TelaUsuario{
-  height: 930px;
+main > #TelaUsuario{
+  height: 1000px;
+  background-color: black;
 }
 .DigitePlaca{
   margin: auto;
