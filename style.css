@@ -251,10 +251,23 @@ span > .txtChegada , .Chegada{
   top: 15px;
 }
 
-span > .txtsaída , .saída{
+span > .txtsaída{
   position: relative;
-  left: 85px;
-  top: -46px;
+  left: 107px;
+  top: -47px;
+}
+
+
+ .saída{
+  position: relative;
+  left: 150px;
+  top: -47px;
+}
+
+.tempoGASTO01{
+  
+position: relative;
+left: -40px;
 }
 button{
   padding: 10px;
