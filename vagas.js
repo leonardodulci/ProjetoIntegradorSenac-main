@@ -66,25 +66,24 @@ function buscarVaga(placa) {
 
 
   if (vagaEncontrada) {
-      const inputChegada = document.querySelector('.Chegada');
-      const inputSaida = document.querySelector('.saída');
+    const inputChegada = document.querySelector('.Chegada');
+    const inputSaida = document.querySelector('.saída');
 
-      inputChegada.value = vagaEncontrada.horaEntrada;
-      inputSaida.value = new Date().toLocaleTimeString(); // Hora atual
+    inputChegada.value = vagaEncontrada.horaEntrada;
+    inputSaida.value = new Date().toLocaleTimeString(); // Hora atual
 
-    const horaEntrada = new Date(inputChegada.value);
-    const horaAtual = new Date();
-    const diferencaEmMilisegundos = horaAtual - horaEntrada;
+  const horaEntrada = new Date(inputChegada.value);
+  const horaAtual = new Date();
+  const diferencaEmMilisegundos = horaAtual - horaEntrada;
 
-    // Convertendo a diferença para minutos (aproximado)
-    const diferencaEmMinutos = Math.round(diferencaEmMilisegundos / (1000 * 60));
+  // Convertendo a diferença para minutos (aproximado)
+  const diferencaEmMinutos = Math.round(diferencaEmMilisegundos / (1000 * 60));
 
-    const horas = Math.floor(diferencaEmMinutos / 60);
-    const minutos = diferencaEmMinutos % 60;
+  const horas = Math.floor(diferencaEmMinutos / 60);
+  const minutos = diferencaEmMinutos % 60;
 
-    
-    console.log(`Tempo gasto: ${horas} horas e ${minutos} minutos`);
-    console.log(diferencaEmMilisegundos)
+  
+  console.log(`Tempo gasto: ${horas} horas e ${minutos} minutos`);
      
   } else {
       alert('Placa não encontrada.');
