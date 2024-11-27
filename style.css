@@ -239,9 +239,13 @@ header > p{
 }
 
 .Chegada , .saída{
+  border-radius: 5px;
+}
+
+.Chegada , .saída{
   height: 20px;
   width: 80px;
-  padding: 10px;
+  padding: 8px;
   text-align: center;
 }
 
@@ -279,7 +283,9 @@ button{
   margin-right: 10px;
   margin-bottom: 20px;
 }
-
+.cadFunc{
+  height: 900px;
+}
 #CadastrarFuncionario {
   padding: 20px;
   margin: auto;

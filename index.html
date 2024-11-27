@@ -148,7 +148,7 @@
                     <br>
                     <p class="txtsaída">Horário de saída:</p>
                     <input type="text" class="saída">
-                    <br><br>
+                    <br>
                      <span class="tempoGASTO"> </span>
                      <br> <br>
                 </span>
@@ -164,33 +164,31 @@
         </div>    
     </main>
 
-        <div id="CadastrarFuncionario" style="margin-top: 50px;">
-            <header class="headerCadastrarFuncionario">
-                <h1>Cadastrar Funcionário</h1>
-            </header>
-            <main>
-                <form>
-                    <p>Nome do Funcionário:</p>
-                    <input type="text" name="nomeFuncionario" id="nomeFuncionario" required><br>
-
-                    <p>E-mail:</p>
-                    <input type="email" name="emailFuncionario" id="emailFuncionario" required><br>
-
-                    <p>Telefone:</p>
-                    <input type="text" name="telefoneFuncionario" id="telefoneFuncionario" required><br>
-
-                    <p>Função:</p>
-                    <select name="funcaoFuncionario" id="funcaoFuncionario" required>
-                        <option value="gerente">Gerente</option>
-                        <option value="atendente">Atendente</option>
-                        <option value="seguranca">Segurança</option>
-                        <option value="manobrista">Manobrista</option>
-                    </select><br>
-
-                <button type="submit">Cadastrar</button>
-                <button id="botaoVoltar" onclick="voltarPaginaInicial()">Voltar</button>
-                </form>
-            </main>
+        <div class="cadFunc">
+            <div id="CadastrarFuncionario" style="margin-top: 50px;">
+                <header class="headerCadastrarFuncionario">
+                    <h1>Cadastrar Funcionário</h1>
+                </header>
+                <main>
+                    <form>
+                        <p>Nome do Funcionário:</p>
+                        <input type="text" name="nomeFuncionario" id="nomeFuncionario" required><br>
+                        <p>E-mail:</p>
+                        <input type="email" name="emailFuncionario" id="emailFuncionario" required><br>
+                        <p>Telefone:</p>
+                        <input type="text" name="telefoneFuncionario" id="telefoneFuncionario" required><br>
+                        <p>Função:</p>
+                        <select name="funcaoFuncionario" id="funcaoFuncionario" required>
+                            <option value="gerente">Gerente</option>
+                            <option value="atendente">Atendente</option>
+                            <option value="seguranca">Segurança</option>
+                            <option value="manobrista">Manobrista</option>
+                        </select><br>
+                    <button type="submit">Cadastrar</button>
+                    <a href="#headerTelaGerenciamento"><button id="botaoVoltar" onclick="voltarPaginaInicial()">Voltar</button></a>
+                    </form>
+                </main>
+            </div>
         </div>
 
     <div id="CadastrarCliente" style="margin-top: 50px;">
@@ -212,8 +210,8 @@
                 <input type="text" name="cpfCliente" id="cpfCliente" required><br>
 
                 <button type="submit">Cadastrar</button>
-                <button id="botaoVoltar" onclick="voltarPaginaInicial()">Voltar</button>
-
+                <a href="#headerTelaGerenciamento"><button id="botaoVoltar">Voltar</button>
+</a>
             </form>
         </main>
     </div>
