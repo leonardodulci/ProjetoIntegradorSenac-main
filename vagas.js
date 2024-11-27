@@ -84,7 +84,7 @@ function buscarVaga(placa) {
 
     
     console.log(`Tempo gasto: ${horas} horas e ${minutos} minutos`);
-
+    console.log(diferencaEmMilisegundos)
      
   } else {
       alert('Placa não encontrada.');
