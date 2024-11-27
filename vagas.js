@@ -113,3 +113,14 @@ inputPlaca.addEventListener('input', () => {
   buscarVaga(inputPlaca.value);
 });
 
+const botoesPagamento = document.querySelectorAll('.btn-pagamento');
+
+botoesPagamento.forEach(botao => {
+  botao.addEventListener('click', () => {
+    // Remove a classe 'btn-pagamento--ativo' de todos os botões
+    botoesPagamento.forEach(btn => btn.classList.remove('btn-pagamento--ativo'));
+
+    // Adiciona a classe 'btn-pagamento--ativo' ao botão clicado
+    botao.classList.add('btn-pagamento--ativo');
+  });
+});

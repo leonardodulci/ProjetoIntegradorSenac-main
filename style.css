@@ -408,3 +408,16 @@ button{
   background-color: #45a049;
 }
 
+.btn-pagamento {
+  /* Estilo padrão do botão */
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.btn-pagamento--ativo {
+  /* Estilo do botão quando clicado */
+  background-color: #4CAF50; /* Verde */
+  color: white;
+}
