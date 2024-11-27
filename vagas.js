@@ -2,7 +2,7 @@
 const vagas = document.querySelectorAll('.vaga');
 
 let vagasOcupadas = JSON.parse(localStorage.getItem('vagasOcupadas')) || []; // Carrega do localStorage ou inicia um novo array
-let valorMinuto = 1 
+
 
 // Função para marcar uma vaga como ocupada e coletar dados
 function marcarVaga(vaga) {
@@ -43,7 +43,7 @@ function marcarVaga(vaga) {
   const resultadoElement = document.querySelector('span.info-vaga');
 
   resultadoElement.textContent = `Vaga ${vaga.textContent} ocupada por ${placa} às ${horaEntrada} horas`;
-  
+ 
 }
 
 
@@ -60,6 +60,7 @@ vagas.forEach(vaga => {
 
 function buscarVaga(placa) {
   const vagaEncontrada = vagasOcupadas.find(vaga => vaga.placa === placa);
+   let minuto = new Date().toLocaleTimeString();
   
 
 
@@ -67,24 +68,31 @@ function buscarVaga(placa) {
   if (vagaEncontrada) {
       const inputChegada = document.querySelector('.Chegada');
       const inputSaida = document.querySelector('.saída');
-      const tempogastado = document.querySelector('#tempoGASTO')
-      const temp = horaEntrada - inputSaida
 
       inputChegada.value = vagaEncontrada.horaEntrada;
       inputSaida.value = new Date().toLocaleTimeString(); // Hora atual
-      tempogastado.value = inputChegada - inputSaida
-      
-     
-      // ... (outras ações, se necessário)
+
+    const horaEntrada = new Date(inputChegada.value);
+    const horaAtual = new Date();
+    const diferencaEmMilisegundos = horaAtual - horaEntrada;
+
+    // Convertendo a diferença para minutos (aproximado)
+    const diferencaEmMinutos = Math.round(diferencaEmMilisegundos / (1000 * 60));
+
+    const horas = Math.floor(diferencaEmMinutos / 60);
+    const minutos = diferencaEmMinutos % 60;
+
+    
+    console.log(`Tempo gasto: ${horas} horas e ${minutos} minutos`);
 
      
   } else {
       alert('Placa não encontrada.');
   }  
+
 }
 
 console.log(vagasOcupadas)
-tempogastado.textContent = temp
 
 
 // Adiciona o event listener ao campo da placa
