@@ -60,30 +60,43 @@ vagas.forEach(vaga => {
 
 function buscarVaga(placa) {
   const vagaEncontrada = vagasOcupadas.find(vaga => vaga.placa === placa);
-   let minuto = new Date().toLocaleTimeString();
-  
-
-
 
   if (vagaEncontrada) {
     const inputChegada = document.querySelector('.Chegada');
     const inputSaida = document.querySelector('.saída');
+    const resultadoTempo = document.querySelector('.tempoGASTO')
 
     inputChegada.value = vagaEncontrada.horaEntrada;
-    inputSaida.value = new Date().toLocaleTimeString(); // Hora atual
+    inputSaida.value = `${new Date().getHours()}:${new Date().getMinutes()}:${new Date().getSeconds()}` // Hora atual
 
-  const horaEntrada = new Date(inputChegada.value);
-  const horaAtual = new Date();
-  const diferencaEmMilisegundos = horaAtual - horaEntrada;
+  const horaAtual = new Date().getHours();
+  const minutoAtual = new Date().getMinutes();
+  const horaEntrada = inputChegada.value;
 
-  // Convertendo a diferença para minutos (aproximado)
-  const diferencaEmMinutos = Math.round(diferencaEmMilisegundos / (1000 * 60));
+  console.log(horaEntrada)
+  console.log(`${horaAtual}:${minutoAtual}:${new Date().getMinutes()}`)
 
+  const horaEntradaString = inputChegada.value; // Assumindo que está no formato HH:MM
+  const [horaEntradaH, horaEntradaM] = horaEntradaString.split(':').map(Number);
+  const horaEntradaDate = new Date();
+  horaEntradaDate.setHours(horaEntradaH);
+  horaEntradaDate.setMinutes(horaEntradaM);
+
+
+  // Calculando a diferença em milissegundos
+  const diferencaEmMilisegundos = new Date() -  horaEntradaDate ;
+
+  console.log(diferencaEmMilisegundos)
+
+  // Convertendo para minutos e horas
+  const diferencaEmMinutos = Math.round(diferencaEmMilisegundos / 60000);
   const horas = Math.floor(diferencaEmMinutos / 60);
   const minutos = diferencaEmMinutos % 60;
 
-  
-  console.log(`Tempo gasto: ${horas} horas e ${minutos} minutos`);
+  console.log(diferencaEmMinutos)
+
+  resultadoTempo.textContent = (`Tempo gasto: ${horas} horas e ${minutos} minutos`);
+
      
   } else {
       alert('Placa não encontrada.');
