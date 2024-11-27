@@ -216,7 +216,7 @@ header > p{
   margin: auto;
   display: block;
 
-  height: 600px;
+  height: 650px;
   width: 500px;
   background-color: rgb(102, 102, 102);
   text-align: center;
@@ -246,27 +246,32 @@ header > p{
 }
 
 span > .txtChegada , .Chegada{
-  position: relative;
-  left: -80px;
-  top: 15px;
+ margin: auto;
+ display: block;
 }
 
 span > .txtsaída{
-  position: relative;
-  left: 107px;
-  top: -47px;
+  margin: auto;
+ display: block;
 }
 
 
  .saída{
-  position: relative;
-  left: 218px;
-  top: -47px;
+  margin: auto;
+  display: block;
+}
+
+.horarios{
+font-weight: bolder;
+font-size: 20px;
 }
 
 .tempoGASTO{
-position: relative;
-left: -40px;
+margin: auto;
+display: block; 
+font-size: 20px;
+background-color: white;
+padding: 5px;
 }
 button{
   padding: 10px;
