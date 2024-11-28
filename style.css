@@ -277,6 +277,13 @@ font-size: 20px;
 background-color: white;
 padding: 5px;
 }
+.valorGasto{
+  background-color: white;
+  padding: 5px;
+  display: block;
+}
+
+
 button{
   padding: 10px;
   border-radius: 1px;
