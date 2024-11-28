@@ -10,7 +10,4 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
-function voltarPaginaInicial() {
 
-    window.location.href = "index.html";
-}

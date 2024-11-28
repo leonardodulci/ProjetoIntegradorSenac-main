@@ -9,8 +9,4 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-function voltarPaginaInicial() {
-
-    window.location.href = "index.html";
-}
 

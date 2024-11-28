@@ -105,7 +105,7 @@ function buscarVaga(placa) {
 
 
   resultadoTempo.textContent = (`Tempo gasto: ${horas} horas e ${minutos} minutos`);
-  resultadoValorGasto.textContent = (`O valor total ficou: R$ ${res}`)
+  resultadoValorGasto.textContent = (`O valor total ficou: R$ ${res.toFixed(2)}`)
      
   } else {
       alert('Placa não encontrada.');
@@ -133,3 +133,6 @@ botoesPagamento.forEach(botao => {
     botao.classList.add('btn-pagamento--ativo');
   });
 });
+
+
+
